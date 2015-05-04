@@ -6,13 +6,14 @@
   "version": "1.0",
 
   "permissions": [
-    "http://news.ycombinator.com/"
+    "webRequest",
+    "webRequestBlocking",
+	"*://news.ycombinator.com/item?id=*"
   ],
 
-  "content_scripts": [
-    {
-      "matches": ["https://news.ycombinator.com/*"],
-      "js": ["redirect.js"]
-    }
-  ]
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
 }

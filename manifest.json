@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+
+  "name": "Handler for Hacker News",
+  "description": "This extension handles all links to news.ycombinator.com, and redirects to hn.premii.com",
+  "version": "1.0",
+
+  "permissions": [
+    "http://news.ycombinator.com/"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://news.ycombinator.com/*"],
+      "js": ["redirect.js"]
+    }
+  ]
+}
